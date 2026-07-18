@@ -1,0 +1,39 @@
+/**
+ * globals.css
+ * Pairs with tailwind.config.js. Handles the two things a Tailwind config
+ * can't: loading the actual font files, and a couple of base resets that
+ * keep the two-mode (canvas-dark / canvas-light) rhythm clean.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    /* Body copy defaults to Inter per design.md — never Aeonik Pro. */
+    font-family: theme("fontFamily.body");
+    color: theme("colors.body");
+    background-color: theme("colors.canvas-light");
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: theme("fontFamily.display");
+  }
+
+  /* design.md: "Don't add drop shadows on cards. Elevation is canvas +
+     surface-luminance shifts." Zeroing this out at the base layer makes
+     that a structural fact rather than a per-component discipline. */
+  * {
+    box-shadow: none;
+  }
+
+  /* Visible keyboard focus, required by the quality floor regardless of
+     what design.md does or doesn't specify. */
+  :focus-visible {
+    outline: 2px solid theme("colors.primary.DEFAULT");
+    outline-offset: 2px;
+  }
+}
