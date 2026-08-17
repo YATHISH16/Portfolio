@@ -218,12 +218,6 @@ My goal is to build **useful, scalable, and intelligent applications** that solv
 
 🌐 **Portfolio:** [yathi.netlify.app](https://yathi.netlify.app)
 
-💻 **GitHub:** [Add your GitHub profile link]
-
-🔗 **LinkedIn:** [Add your LinkedIn profile link]
-
-📧 **Email:** [Add your professional email]
-
 ---
 
 ## ⭐ Support
